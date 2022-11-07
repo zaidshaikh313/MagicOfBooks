@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="container">
+  <div class="card">
+    <div *ngIf="books">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let book of books">
+          <div class="d-flex justify-content-between">
+            <div>
+              <h4>Title:{{ book.title }}</h4>
+              <p>Author: {{ book.author }}</p>
+              <p>Languade:{{ book.language }}</p>
+              <p>Pages:{{ book.pages }}</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div *ngIf="books.length === 0">
+  <h3 style="text-align:center;">Please add books in WishList first</h3>
+</div>
